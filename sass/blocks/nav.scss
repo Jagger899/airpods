@@ -1,0 +1,46 @@
+.nav {
+  
+  &__list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+
+    @include on560 {
+      flex-wrap: wrap;
+      gap: 20px 40px;
+    }
+  }
+
+  &__item {
+    font-weight: 700;
+
+    &--button {
+      @include on560 {
+        margin-left: auto;
+      }
+    }
+
+    &:first-child {
+      @include on560 {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__link {
+    
+  }
+
+  &__button {
+    font-weight: 700;
+    padding: 15px 58px;
+    background-color: #000;
+    border-radius: 30px;
+    color: #fff;
+    text-transform: uppercase;
+
+    @include on560 {
+      width: 250px;
+    }
+  }
+}

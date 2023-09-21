@@ -1,0 +1,64 @@
+.choose-color {
+  padding: 45px 0 180px;
+  text-align: center;
+
+  @include on768 {
+    padding-bottom: 60px;
+  }
+
+  @include on560 {
+    padding-bottom: 40px;
+  }
+
+  @include on360 {
+    padding: 30px;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    @include on430 {
+      font-size: 28px;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    max-width: 557px;
+    margin-bottom: 80px;
+
+    @include on768 {
+      margin-bottom: 50px;
+    }
+
+    @include on560 {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+    @include on1200 {
+      flex-wrap: wrap;
+    }
+
+    @include on768 {
+      gap: 16px;
+    }
+  }
+
+  &__button {
+    padding: 49px 55px 51px;
+    border: 1px solid #777;
+    border-radius: 20px;
+
+    &--active {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.footer {
+  padding: 50px 0 40px;
+  background-color: #000;
+  // position: relative;
+  // z-index: -2;
+
+  color: #fff;
+  text-align: center;
+
+  &__link {
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  &__logo {
+    margin-bottom: 80px;
+    display: inline-block;
+  }
+
+  &__nav {
+    
+  }
+
+  &__list {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}

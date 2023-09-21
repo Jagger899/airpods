@@ -1,0 +1,136 @@
+.header {
+  min-height: 100vh;
+  // background: linear-gradient(180deg, #CADBEB 0%, rgba(235, 235, 235, 0.00) 100%);
+  position: relative;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0;
+
+    @include on560 {
+      align-items: flex-start;
+    }
+  }
+
+  &__images {
+    text-align: center;
+    padding-bottom: 50px;
+
+    &::before {
+      content: '';
+      // background: linear-gradient(180deg, #CADBEB 0%, rgba(235, 235, 235, 0.00) 100%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: -2;
+    }
+
+    &:has(.color--blue.content-item--active)::before {
+      background: linear-gradient(180deg, #CADBEB 0%, rgba(235, 235, 235, 0.00) 100%);
+    }
+    &:has(.color--red.content-item--active)::before {
+      background: linear-gradient(180deg, #F3D6D1 0%, rgba(235, 235, 235, 0.00) 100%);
+    }
+    &:has(.color--black.content-item--active)::before {
+      background: linear-gradient(180deg, #B6B6B6 0%, rgba(235, 235, 235, 0.00) 100%);
+    }
+    &:has(.color--silver.content-item--active)::before {
+      background: linear-gradient(180deg, #FAFAFA 0%, rgba(235, 235, 235, 0.00) 100%);
+    }
+    &:has(.color--green.content-item--active)::before {
+      background: linear-gradient(180deg, #DDEAD9 0%, rgba(235, 235, 235, 0.00) 100%);
+    }
+  }
+  
+  &__title {
+    font-size: 210px;
+    font-weight: 700;
+    position: absolute;
+    padding-top: 110px;
+
+    @include on1468 {
+      font-size: 180px;
+      transform: translate(129px, 29px);
+    }
+
+    @include on1350 {
+      transform: none;
+      font-size: 140px;
+      padding-top: 35vh;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    @include on920 {
+      position: relative;
+      font-size: 100px;
+      padding-top: 0;
+    }
+
+    @include on680 {
+      font-size: 58px;
+    }
+
+    @include on430 {
+      font-size: 46px;
+    }
+
+    &--pod {
+      z-index: -1;
+      position: relative;
+
+      @include on1350 {
+        z-index: 1;
+      }
+    }
+
+    &--s {
+      display: inline-block;
+      transform: translateY(60px);
+
+      @include on1350 {
+        transform: none;
+      }
+
+      @include on920 {
+        margin-right: 20px;
+      }
+    }
+
+    &--m {
+      display: inline-block;
+      transform: translate(-54px,287px);
+
+      @include on1350 {
+        transform: none;
+      }
+    }
+
+    &--ax {
+      display: inline-block;
+      transform: translate(-112px, 412px);
+      position: relative;
+      z-index: -1;
+
+      @include on1350 {
+        transform: none;
+      }
+    }
+  }
+
+  img {
+    @include on1468 {
+      max-width: 100%;
+    }
+  }
+}
+
+.header__images:has(.color--blue.content-item--active)::before {
+  background: linear-gradient(180deg, #CADBEB 0%, rgba(235, 235, 235, 0.00) 100%);
+}

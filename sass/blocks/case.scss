@@ -1,0 +1,66 @@
+.case {
+  padding: 80px 0 98px;
+  background-color: #fafafa;
+  text-align: center;
+
+  @include on768 {
+    padding: 60px 0;
+  }
+
+  @include on560 {
+    padding: 40px 0;
+  }
+
+  @include on360 {
+    padding: 30px 0;
+  }
+
+  &__text {
+    max-width: 825px;
+    margin: 0 auto 40px;
+
+    &--energy {
+      width: 404px;
+      margin-bottom: 0;
+    }
+  }
+
+  // &__img {
+  //   margin-bottom: 180px;
+  // }
+
+  &__title {
+
+    &--energy {
+      padding-top: 160px;
+      margin-bottom: 40px;
+
+      @include on768 {
+        padding-top: 60px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__hours {
+    font-size: 210px;
+    font-weight: 700;
+    margin-bottom: 40px;
+
+    @include on768 {
+      font-size: 110px;
+      margin-bottom: 20px;
+    }
+
+    @include on430 {
+      font-size: 92px;
+    }
+  }
+
+  &__img {
+
+    @include on430 {
+      max-width: 100%;
+    }
+  }
+}
